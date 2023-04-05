@@ -1,0 +1,25 @@
+Welcome to SimpleLemon
+
+This is a chat application aimed at providing a secure and safe experience.
+It is recommended to take the utmost precautions when using this app,
+including but not limited to, using a VPN, using the Tor Onion network.
+You should also NEVER store your passwords or signing keys in plain-text
+form. Veracrypt is a free and open-source software that I personally
+recommend users take advantage of. This application will have you create
+a password to unlock/unencrypt your signing keys, which will be used to
+prove your identity on the network, and to transmit your messages.
+SimpleLemon staff will never ask you to share this password or keys.
+If you are unsure if you will remember your password, use Veracrypt
+to encrypt your password(s) with a password you WILL remember.
+SimpleLemon staff can not recover accounts lost due to a forgotten
+password.%20%When connecting to a network, your identity will be broadcast to the entire
+network (clients also connected to the same server). SimpleLemon
+does its best in masking your clear identity by never storing your
+IP address, and only using your verifying key to prove your
+authenticity. Public servers that allow you to connect and chat with
+others may or may not store your IP in some way, as anyone can host,
+modify, or reverse engineer the server as they see fit. This is the
+downside of using publically hosted servers.%20%When you engage in a private message stream with another user on the
+network, your IP is transmitted through the network and to the user.
+It is of the utmost importance that you safeguard your identity with
+some or all of the methods listed on Page 1 of this readme.
