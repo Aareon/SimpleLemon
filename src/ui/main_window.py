@@ -4,9 +4,9 @@ from PySide6.QtCore import Qt
 from PySide6.QtGui import QScreen
 from PySide6.QtWidgets import QVBoxLayout, QHBoxLayout, QMainWindow, QApplication, QWidget, QPushButton, QLabel, QFrame
 
-from src.password_window import PasswordWindow
+from src.ui.password_window import PasswordWindow
 
-SRC_PATH = Path(__file__).parent
+SRC_PATH = Path(__file__).parent.parent
 ROOT_PATH = SRC_PATH.parent
 RES_PATH = ROOT_PATH / "res"
 

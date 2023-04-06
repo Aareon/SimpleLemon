@@ -2,7 +2,7 @@ import sys
 
 from PySide6.QtWidgets import QApplication
 
-from src.main_window import MainWindow
+from src.ui.main_window import MainWindow
 
 
 def run():
@@ -17,7 +17,7 @@ import sys
 
 from PySide6.QtWidgets import QApplication
 
-from src.main_window import MainWindow
+from src.ui.main_window import MainWindow
 
 
 def run():
