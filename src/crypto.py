@@ -30,6 +30,8 @@ def create_key(passphrase, alias=None, email=None):
 
 if __name__ == "__main__":
     # test crypto functions
-    test_key = create_key("SomeSuperSecurePassword123", alias="Aareon", email="askully13@gmail.com")
+    test_key = create_key(
+        "SomeSuperSecurePassword123", alias="Aareon", email="askully13@gmail.com"
+    )
     test_pk = get_public_key(test_key)
     print(test_pk)

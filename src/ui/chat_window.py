@@ -2,11 +2,21 @@ import sys
 from typing import List
 from PySide6.QtCore import SIGNAL
 from PySide6.QtGui import QScreen
-from PySide6.QtWidgets import QVBoxLayout, QHBoxLayout, QTreeWidget, QTreeWidgetItem, QWidget, QPushButton, QTextEdit, QLineEdit
+from PySide6.QtWidgets import (
+    QVBoxLayout,
+    QHBoxLayout,
+    QTreeWidget,
+    QTreeWidgetItem,
+    QWidget,
+    QPushButton,
+    QTextEdit,
+    QLineEdit,
+)
 
 
 class UserTreeItem(QTreeWidgetItem):
     """Custom QTreeWidgetItem with Widgets"""
+
     def __init__(self, parent, name):
         """parent (QTreeWidget) : Item's QTreeWidget parent.
         name   (str)         : Item's name. just an example."""
@@ -15,17 +25,19 @@ class UserTreeItem(QTreeWidgetItem):
         self.setText(0, name)
 
         ## Signals
-        #self.treeWidget().connect(self.button, SIGNAL("clicked()"), self.buttonPressed)
+        # self.treeWidget().connect(self.button, SIGNAL("clicked()"), self.buttonPressed)
 
     @property
     def name(self):
-        '''
+        """
         Return name ( 1st column text )
-        '''
+        """
         return self.text(0)
+
 
 class ServerTreeItem(QTreeWidgetItem):
     """Custom QTreeWidgetItem with Widgets"""
+
     def __init__(self, parent, name):
         """parent (QTreeWidget) : Item's QTreeWidget parent.
         name   (str)         : Item's name. just an example."""
@@ -34,7 +46,7 @@ class ServerTreeItem(QTreeWidgetItem):
         self.setText(0, name)
 
         ## Signals
-        #self.treeWidget().connect(self.button, SIGNAL("clicked()"), self.buttonPressed)
+        # self.treeWidget().connect(self.button, SIGNAL("clicked()"), self.buttonPressed)
 
     @property
     def name(self):
@@ -58,7 +70,7 @@ class ChatWindow(QWidget):
         frmY = (screen_size.height() - self.height()) / 2
         # move window to center of screen
         self.move(frmX, frmY)
-        self.setWindowTitle("SimpleLemon -- Chat")
+        self.setWindowTitle("SimpleLemon - Chat")
 
         hlayout = QHBoxLayout()
         self.server_tree = QTreeWidget()
@@ -75,7 +87,10 @@ class ChatWindow(QWidget):
         hlayout.addWidget(self.server_tree)
 
         vlayout = QVBoxLayout()
-        self.message_box = QTextEdit(readOnly=True, text="Aareon: this shit boo boo cuh\ndapper: stfu and get back to work monkey")
+        self.message_box = QTextEdit(
+            readOnly=True,
+            text="Aareon: this shit boo boo cuh\ndapper: stfu and get back to work monkey",
+        )
         vlayout.addWidget(self.message_box)
 
         hlayout1 = QHBoxLayout()
@@ -100,11 +115,14 @@ class ChatWindow(QWidget):
 
         self.setLayout(hlayout)
 
+
 if __name__ == "__main__":
     from PySide6.QtWidgets import QApplication
+
     app = QApplication()
     w = ChatWindow(
         ["Freenode", "Discord", "Skype"],
-        ["Aareon", "dapper", "pin", "SolarFlame"])
+        ["Aareon", "dapper", "pin", "SolarFlame"]
+    )
     w.show()
     sys.exit(app.exec_())
