@@ -2,7 +2,16 @@ from pathlib import Path
 
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QScreen
-from PySide6.QtWidgets import QVBoxLayout, QHBoxLayout, QMainWindow, QApplication, QWidget, QPushButton, QLabel, QFrame
+from PySide6.QtWidgets import (
+    QVBoxLayout,
+    QHBoxLayout,
+    QMainWindow,
+    QApplication,
+    QWidget,
+    QPushButton,
+    QLabel,
+    QFrame,
+)
 
 from src.ui.password_window import PasswordWindow
 
@@ -25,7 +34,7 @@ class MainWindow(QMainWindow):
         if self.curr_page < len(self.pages):
             self.curr_page += 1
             self.btn_page_back.setEnabled(True)
-        if self.curr_page == len(self.pages)-1:
+        if self.curr_page == len(self.pages) - 1:
             self.btn_page_fwd.setEnabled(False)
         self.wisdom_label.setText(self.pages[self.curr_page])
 
